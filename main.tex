@@ -815,31 +815,54 @@ Pertama, kami menghitung bandwidth untuk setiap saluran = (1 MHz) / 10 = 100 KHz
 \vspace{12pt}
 
 \begin{exercise}
-Manakah dari empat teknik konversi digital-ke-analog (ASK, FSK, PSK atau QAM) yang paling rentan terhadap noise? Pertahankan jawaban Anda.
+Sebuah perusahaan kabel menggunakan salah satu saluran TV kabel (dengan bandwidth 6 MHz) untuk menyediakan komunikasi digital bagi setiap penduduk. Berapa kecepatan data yang tersedia untuk setiap penduduk jika perusahaan menggunakan teknik 64-QAM?
 \end{exercise}
 
 \begin{solution}
-Menurut saya, ASK adalah teknik yang paling rentan di antara empat teknik konversi digital ke analog. Karena amplitudo lebih dipengaruhi oleh noise daripada fasa atau frekuensi.
+$B = (l+d)s = s, (d=o), L =64 B = N/Y \rightarrow N = Br N = 6M * log_2 64  = 6M * 6 = 36Mbps$
 \end{solution}
 
 \vspace{12pt}
 
 \begin{exercise}
-Definisikan konversi analog-ke-analog?
+Saluran telepon memiliki bandwidth 4 KHz. Berapa jumlah maksimum bit yang dapat kami kirim menggunakan masing-masing teknik berikut? Misalkan d = O
+\begin{itemize}
+\item[a.] ASK
+\item[b.] QPSK
+\item[c.] 16-QAM
+\item[d.] 64-QAM
+\end{itemize}
 \end{exercise}
 
 \begin{solution}
-Proses mengubah salah satu karakteristik sinyal analog untuk mewakili amplitudo sesaat dari sinyal baseband disebut konversi analog-ke-analog. Ini juga disebut modulasi sinyal analog sinyal analog broadband dasar memodulasi pembawa untuk membuat sinyal analog broadband.
+Kami menggunakan rumus N = [1/(1 + d)] × r × B, tetapi pertama-tama kita perlu menghitung nilai r untuk setiap kasus.
+\begin{itemize}
+\item[a.] $r = log_22 = 1 \quad \rightarrow \quad N =  [1/(1 + 0)] * 1 * (4 KHz) = 4 kbps $
+\item[b.] $r = log_24 = 2 \quad \rightarrow \quad N =  [1/(1 + 0)] * 2 * (4 KHz) = 8 kbps $
+\item[c.] $r = log_216 = 4 \quad \rightarrow \quad N =  [1/(1 + 0)] * 4 * (4 KHz) = 16 kbps $
+\item[d.] $r = log_264 = 6 \quad \rightarrow \quad N =  [1/(1 + 0)] * 6 * (4 KHz) = 24 kbps $
+\end{itemize}
 \end{solution}
 
 \vspace{12pt}
 
 \begin{exercise}
-Manakah dari tiga teknik konversi analog-ke-analog (AM, FM, atau PM) yang paling rentan terhadap noise? Pertahankan jawaban Anda.
+Berapa bit per baud yang dapat kita kirim dalam setiap kasus berikut jika konstelasi sinyal memiliki salah satu dari jumlah titik berikut?
+\begin{itemize}
+\item[a.] 2
+\item[b.] 4
+\item[c.] 16
+\item[d.] 1024
+\end{itemize}
 \end{exercise}
 
 \begin{solution}
-Menurut saya, AM, FM, PM, di antara ketiga teknik konversi analog ke analog ini, teknik yang paling rentan adalah AM karena amplitudo lebih dipengaruhi oleh noise daripada fase atau frekuensi.
+  \begin{itemize}
+    \item[a.] $log_22 = 1$
+    \item[b.] $log_24 = 2$
+    \item[c.] $log_216 = 4$
+    \item[d.] $log_21024 = 10 $
+  \end{itemize}
 \end{solution}
 
 \chapter{Bandwidth Utilization: Multiplexing and Spreading}
